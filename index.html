@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> MATLAB Codes of Thermal Analysis Book </title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Hamburger Menu Button -->
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h3>MATLAB Codes</h3>
+            <button class="close-btn" id="closeBtn">&times;</button>
+        </div>
+        <a href="index.html" class="active">Home</a>
+        <a href="argomento1.html">Thermal Balance Equations</a>
+        <a href="contatti.html">Contacts</a>
+    </nav>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="hero-section">
+            <h1>Codes for Thermal Analysis Book</h1>
+            <div class="hero-divider-long"></div>
+            <p class="hero-subtitle">Collection of MATLAB codes and exercises</p>
+        </div>
+
+        <div class="container">
+            <div class="intro-home">
+                <h2>Benvenuti</h2>
+                <p>This repository contains MATLAB codes developed for educational purposes as supplementary material to the book "Elements of Thermal Analysis and Thermomechanical Interactions Onboard Spacecraft". Each section is dedicated to a specific topic, with practical implementations and commented code.</p>
+
+                <div class="cta-section">
+                    <h3>Start to explore!</h3>
+                    <p>Use the sidebar menu to navigate between the different topics. Each project includes downloadable source code and detailed documentation.</p>
+                    <button class="cta-btn" onclick="document.getElementById('menuToggle').click()">Explore the topics</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2025 F. Angeletti. M . Parisse. MATLAB codes for educational purposes.
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('overlay');
+        const closeBtn = document.getElementById('closeBtn');
+
+        function openMenu() {
+            sidebar.classList.add('active');
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMenu() {
+            sidebar.classList.remove('active');
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        menuToggle.addEventListener('click', openMenu);
+        closeBtn.addEventListener('click', closeMenu);
+        overlay.addEventListener('click', closeMenu);
+
+        // Close menu on ESC key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && sidebar.classList.contains('active')) {
+                closeMenu();
+            }
+        });
+    </script>
+</body>
+</html>
