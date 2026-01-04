@@ -1,0 +1,23 @@
+
+## License
+Educational Use License (Non-Commercial, No Redistribution) 
+You may use it for **educational purposes only**.  
+Book attribution is required.  
+Commercial use or inclusion in closed-source projects is prohibited.
+
+Attribution:
+% Project Name: Thermal Analysis of Space Systems
+% Authors: F. Angeletti, M. Parisse
+% Year: 2025
+% License: Educational Use Only (No resale / No closed-source)
+% Attribution: If you use or reference this code, please cite:
+%   F. Angeletti, M. Parisse, "Thermal Analysis of Space Systems", GitHub: https://github.com/feang-sap/thermal-analysis-sa6
+% -------------------------------------------------------
+
+%    This project may be used and modified solely for non-commercial 
+%    educational or research purposes, provided that proper
+%    attribution to the authors and the book is maintained.  
+%    Redistribution, sharing, sublicensing, or re-publication
+%    of this code (original or modified) is strictly prohibited.
+%    Commercial use, inclusion in proprietary software, or use in flight-
+%    critical applications is strictly prohibited.
