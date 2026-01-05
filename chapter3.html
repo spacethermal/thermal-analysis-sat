@@ -1,0 +1,121 @@
+c<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 3 - MATLAB Project Showcase</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Hamburger Menu Button -->
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h3>MATLAB Showcase</h3>
+            <button class="close-btn" id="closeBtn">&times;</button>
+        </div>
+        <a href="index.html">Home</a>
+        <a href="chapter2.html">Radiative Exchange</a>
+        <a href="chapter3.html" class='active'>Space Environment Modeling</a>
+        <a href="argomento2.html">Insolation Period</a>
+        <a href="argomento1.html">Thermal Balance Equations</a>
+        <a href="chapter7.html">Thermomechanical Interactions</a>
+        <a href="contatti.html">Contacts</a>
+    </nav>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="container">
+            <div class="page-header">
+                <h1>Chapter 2 - Radiative Exchange Among Surfaces</h1>
+                <p class="page-description">On this page, you will find a collection of MATLAB projects related to Chapter 2 of the book. Each card contains a brief description and a button to download the code.</p>
+            </div>
+
+            <div class="projects">
+                <div class="project-card">
+                    <img src="https://feang-sap.github.io/thermal-analysis-sat/images/chapter2/chapter2_1.png" alt="Example image">
+                    <h3>Two-node Model: R1 = R2</h3>
+                    <p>Code describing the temperature behaviour in both steady state and transient conditions for two surfaces with the same radius.</p>
+                    <a class="download-btn" href="codes/chapter2/Twonodes_equalradii.zip" download="Twonodes_equalradii.zip">Download Code</a>
+                    <p>Password is in the book</p>
+                </div>
+                <div class="project-card">
+                    <img src="https://feang-sap.github.io/thermal-analysis-sat/images/chapter2/chapter2_1.png" alt="Example image">
+                    <h3>Two-node Model: R1 > R2</h3>
+                    <p>Code describing the temperature behaviour in steady state regime when the insolated surface always shields the other one from the Sun.</p>
+                    <a class="download-btn" href="codes/chapter2/Twonodes_R1morethanR2.zip" download="Twonodes_R1morethanR2.zip">Download Code</a>
+                    <p>Password is in the book</p>
+                </div>
+                <div class="project-card">
+                    <img src="https://feang-sap.github.io/thermal-analysis-sat/images/chapter2/chapter2_1.png" alt="Example image">
+                    <h3>Two-node Model: R1 < R2</h3>
+                    <p>Code describing the temperature behaviour in both steady state and transient conditions when the insolated surface does not shield the other one from the Sun completely.</p>
+                    <a class="download-btn" href="codes/chapter2/Twonodes_R1lessthanR2.zip" download="Twonodes_R1lessthanR2.zip">Download Code</a>
+                    <p>Password is in the book</p>
+                </div>
+                <div class="project-card">
+                    <img src="https://feang-sap.github.io/thermal-analysis-sat/images/chapter2/chapter2_4.png" alt="Example image">
+                    <h3>Three-node Model: R1 < R2</h3>
+                    <p>Code describing the temperature behaviour in transient conditions when the insolated surface does not shield the other one from the Sun completely.</p>
+                    <a class="download-btn" href="codes/chapter2/Threenodes_R1lessthanR2.zip" download="Threenodes_R1lessthanR2.zip">Download Code</a>
+                    <p>Password is in the book</p>
+                </div>
+                <div class="project-card">
+                    <img src="https://feang-sap.github.io/thermal-analysis-sat/images/chapter2/chapter2_1.png" alt="Example image">
+                    <h3>Four-node Model: R1 = R2</h3>
+                    <p>Code describing the temperature behaviour in transient conditions for two surfaces with the same radius. Each face correspond to a thermal node (i.e. temperature gradient across the thickness is considered).</p>
+                    <a class="download-btn" href="codes/chapter2/Fournodes_equalradii.zip" download="Fournodes_equalradii.zip">Download Code</a>
+                    <p>Password is in the book</p>
+                </div>        
+                <!-- Aggiungi altre schede secondo necessità -->
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 M. Parisse. F. Angeletti. MATLAB codes per educational purposes.
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('overlay');
+        const closeBtn = document.getElementById('closeBtn');
+
+        function openMenu() {
+            sidebar.classList.add('active');
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMenu() {
+            sidebar.classList.remove('active');
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        menuToggle.addEventListener('click', openMenu);
+        closeBtn.addEventListener('click', closeMenu);
+        overlay.addEventListener('click', closeMenu);
+
+        // Close menu on ESC key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && sidebar.classList.contains('active')) {
+                closeMenu();
+            }
+        });
+    </script>
+</body>
+</html>
